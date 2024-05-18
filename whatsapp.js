@@ -29,7 +29,7 @@ client.on("message", async (message) => {
   
   console.log("hello");
   if(message.body === 'Hi'){
-    client.sendMessage(message.from,'Hello\nThis is a whatsapp bot\nChoose one\n1)Product advisor\n2)Price comparison\n\nGo to our website: https://react-8b0dd.web.app');
+    client.sendMessage(message.from,'Hello\nThis is a whatsapp bot\nChoose one\n1)Product advisor\n2)Price comparison');
 }
 else if(message.body === 'Product advisor'){
     client.sendMessage(message.from,'What type of product do you want?\nElectronics\nKitchenware\nClothes');
@@ -117,38 +117,7 @@ else {
       client.sendMessage(message.from,replyMsg);
     }
 
-      // Review ka dekh lena
-
-      /*
-      const url = ``;//idhar api ka url daalna aur search mein reviews add karna aur iske neeche ka code wrong hai
-      
-        const response = await axios(url);
-        const reviews = response.data.organic_results;
-        if (reviews) {
-          let unique_products = [];
-          for (let i = 0; i < reviews.length; i++) {
-            if (unique_products.length >= 1) {
-              break;
-            }
-            let product = top_results[i];
-            let source = product.source;
-            let title = product.title;
-            let price = product.price;
-            if (
-              !unique_products.find((p) => p.title === title && p.source === source)
-            ) {
-              unique_products.push({ title, source, price });
-            }
-          }
-          let replyMsg = "Here are some reviews:\n";
-          for (let i = 0; i < unique_products.length; i++) {
-            let product = unique_products[i];
-            replyMsg += `${i + 1}. ${product.title} \n${product.price} \n${
-              product.source
-            }\n\n`;
-          }
-        }
-      */  
+     
   }
 
 });
